@@ -15,6 +15,6 @@ spec:
    spec:
     containers:
       - name: Simple-hello-world
-        image: hello-world:nanoserver-ltsc2022
+        image: hello-world
         ports:
         - containerPort: 8080
