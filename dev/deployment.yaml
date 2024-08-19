@@ -15,7 +15,7 @@ spec:
         app: myapp
     spec:
       containers:
-        - name: Simple-hello-world
+        - name: simple-hello-world
           image: hello-world
           ports:
             - containerPort: 8080
