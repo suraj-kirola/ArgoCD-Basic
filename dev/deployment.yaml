@@ -1,20 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- labels:
-   name: myapp
+  name: myapp-deployment
+  labels:
+    app: myapp
 spec:
   selector:
     matchLabels:
-     name: myapp
+      app: myapp
   replicas: 2
   template:
-   metadata:
-    labels:
-     name: myapp
-   spec:
-    containers:
-      - name: Simple-hello-world
-        image: hello-world
-        ports:
-        - containerPort: 8080
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+        - name: Simple-hello-world
+          image: hello-world
+          ports:
+            - containerPort: 8080
