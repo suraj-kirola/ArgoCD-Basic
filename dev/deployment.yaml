@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ labels:
+   name: myapp
+spec:
+  selector:
+    matchLabels:
+     name: myapp
+  replicas: 2
+  template:
+   metadata:
+    labels:
+     name: myapp
+   spec:
+    containers:
+      - name: Simple-hello-world
+        image: hello-world:nanoserver-ltsc2022
+        ports:
+        - containerPort: 8080
